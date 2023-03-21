@@ -28,7 +28,7 @@ console.log(`Verificando pasajes para ${ciudadDestino}`);
 if ((ciudadesDisponibles.indexOf(ciudadDestino) > -1) && (edadPasajero >= 18 || estaAcompanado)) {
     console.log('El Pasaje está disponible para la venta');
 } else {
-    console.log('La ciudad no está disponible para viajar or el pasajero no cumple las reglas');
+    console.log('La ciudad no está disponible para viajar ó el pasajero no cumple las reglas');
 }
 
 edadPasajero = 17;
@@ -37,7 +37,7 @@ estaAcompanado = true;
 /*Aplicando lógica negativa*/
 
 if (!(ciudadesDisponibles.indexOf(ciudadDestino) > -1 && (edadPasajero >= 18 || estaAcompanado))) {
-    console.log('La ciudad no está disponible para viajar or el pasajero no cumple las reglas');
+    console.log('La ciudad no está disponible para viajar ó el pasajero no cumple las reglas');
 } else {
     console.log('El Pasaje está disponible para la venta');
 }
