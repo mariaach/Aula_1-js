@@ -1,10 +1,36 @@
-const salario = "3300.0";
+const datos = [{
+        'ciudad': 'Bogota',
+        'precio': 500
+    },
+    {
+        'ciudad': 'Lima',
+        'precio': 400
+    },
+    {
+        'ciudad': 'Santiago',
+        'precio': 380
+    },
+    {
+        'ciudad': 'Montevideo',
+        'precio': 200
+    }
+]
 
-if (salario < 2600.0)
-    console.log("Su alícuota es de 15%");
-console.log("Puede deducir del pago hasta 350 pesos");
+let presupuestoDisponible = 390;
+let ciudadSeleccionada = "";
+let posiblesDestinos = new Array;
 
+for (let i = 0; i < datos.length; i++) {
+    if (i < datos.length && datos[i].precio <= presupuestoDisponible) {
+        ciudadSeleccionada = datos[i].ciudad;
+        posiblesDestinos.push(datos[i].ciudad);
+    }
+}
 
-if (salario < 3750.0)
-    console.log("Su alícuota es de 22.5%");
-console.log("Puede deducir del pago hasta 650 pesos");
+if (ciudadSeleccionada == "") {
+    console.log("No tenemos pasajes disponibles");
+} else {
+    for (let j = 0; j < posiblesDestinos.length; j++) {
+        console.log("Puedes comprar pasajes para: " + posiblesDestinos[j]);
+    }
+}
